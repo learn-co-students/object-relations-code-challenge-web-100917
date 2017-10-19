@@ -1,4 +1,5 @@
 # Please copy/paste all three classes into this file to submit your solution!
+#customers
 class Customer
 
   @@all = []
@@ -44,6 +45,7 @@ class Customer
   end
 end
 
+#restaurants
 class Restaurant
 
   @@all = []
@@ -72,6 +74,7 @@ class Restaurant
 
 end
 
+#reviews
 class Review
   attr_accessor :content, :restaurant, :customer
   @@all = []
@@ -86,5 +89,4 @@ class Review
   def self.all
     @@all
   end
-
 end
