@@ -40,7 +40,7 @@ class Customer
 
   # + Customer#add_review(restaurant, content)
   #   + given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
-  def self.add_revies(restaurant,content)
+  def add_reviews(restaurant,content)
     Review.new(self.full_name,restaurant,content)
   end
 

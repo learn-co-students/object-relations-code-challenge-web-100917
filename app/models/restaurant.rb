@@ -21,12 +21,12 @@ class Restaurant
   end
   # + Restaurant#reviews
   #   + returns an array of all reviews for that restaurant
-  def self.reviews
-    Reviews.all.select{|review|review.restaurant == self.name}
+  def self.reviews(name)
+    Review.all.select{|review|review.restaurant == name}
   end
   # + Restaurant#customers
   #   + should return all of the customers who have written reviews of that restaurant.
-  def self.customers
-    self.reviews.map{|review|review.customer}
+  def self.customers(name)
+    self.reviews(name).map{|review|review.customer}
   end
 end

@@ -1,6 +1,4 @@
-# Build out the following methods on the Review class
-#
-#
+
 class Review
   @@all = []
 
@@ -21,13 +19,13 @@ class Review
   # + Review#customer
   #   + returns the customer for that given review
 
-  def self.customer(name)
-    Customer.find_by_name == name
+  def self.customer(review)
+    @@all.select{|review|review.customer}
   end
   # + Review#restaurant
   #   + returns the restaurant for that given review
-  def self.restaurant(name)
-    Restaurant.find_by_name == name
+  def self.restaurant(review)
+    @@all.select{|review|review.customer}
   end
 
 end
