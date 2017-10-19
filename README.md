@@ -20,7 +20,7 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 We've provided you with a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb`. You'll be able to test out the methods that you write here.
 
-**To Submit** - once you've completed all the deliverables, please copy/paste your three class definitions into the `solution.rb`  file. Please don't submit the lab until we give you the signal. 
+**To Submit** - once you've completed all the deliverables, please copy/paste your three class definitions into the `solution.rb`  file. Please don't submit the lab until we give you the signal.
 
 ## Deliverables
 
@@ -34,7 +34,7 @@ Build the following methods on the customer class
 + Customer.all_names
   + should return an array of all of the customer full names
 + Customer#add_review(restaurant, content)
-  + given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
+  + given some content and a restaurant, creates a new review and associates it with that customer and that restaurant <<< COME BACK TO THIS
 
 Build out the following methods on the Review class
 
@@ -44,6 +44,8 @@ Build out the following methods on the Review class
   + returns the customer for that given review
 + Review#restaurant
   + returns the restaurant for that given review
+ (((((MAY NEED READ WRITE CAPABILITIES, also attr_accessor for CONTENT)))))
+
 
 Build out the following methods on the restaurant class
 
