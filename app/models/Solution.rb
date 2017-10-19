@@ -1,41 +1,5 @@
-# Build out the following methods on the restaurant class
-#
-
-class Restaurant
-  @@all =[]
-  attr_accessor :name, :all
-
-  def initialize(name)
-    @name = name
-    @@all << self
-  end
-  # + Restaurant.all
-  #   + returns an array of all restaurants
-  def self.all
-    @@all
-  end
-  # + Restaurant.find_by_name(name)
-  #   + given a string of restaurant name, returns the first restaurant that matches
-  def self.find_by_name(name)
-    self.all.select{|restaurant|restaurant.name == name}
-  end
-  # + Restaurant#reviews
-  #   + returns an array of all reviews for that restaurant
-  def self.reviews
-    Reviews.all.select{|review|review.restaurant == self.name}
-  end
-  # + Restaurant#customers
-  #   + should return all of the customers who have written reviews of that restaurant.
-  def self.customers
-    self.reviews.map{|review|review.customer}
-  end
-end
-
 class Customer
   # Build the following methods on the customer class
-
-
-
   attr_accessor :first_name, :last_name,:all,:all_names
   @@all = []
 
@@ -73,11 +37,12 @@ class Customer
 
   # + Customer#add_review(restaurant, content)
   #   + given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
-  def self.add_revies(restaurant,content)
+  def add_reviews(restaurant,content)
     Review.new(self.full_name,restaurant,content)
   end
 
 end
+
 
 # Build out the following methods on the restaurant class
 #
@@ -102,20 +67,18 @@ class Restaurant
   end
   # + Restaurant#reviews
   #   + returns an array of all reviews for that restaurant
-  def self.reviews
-    Reviews.all.select{|review|review.restaurant == self.name}
+  def self.reviews(name)
+    Review.all.select{|review|review.restaurant == name}
   end
   # + Restaurant#customers
   #   + should return all of the customers who have written reviews of that restaurant.
-  def self.customers
-    self.reviews.map{|review|review.customer}
+  def self.customers(name)
+    self.reviews(name).map{|review|review.customer}
   end
 end
 
 
-# Build out the following methods on the Review class
-#
-#
+
 class Review
   @@all = []
 
@@ -136,13 +99,13 @@ class Review
   # + Review#customer
   #   + returns the customer for that given review
 
-  def self.customer(name)
-    Customer.find_by_name == name
+  def self.customer(review)
+    @@all.select{|review|review.customer}
   end
   # + Review#restaurant
   #   + returns the restaurant for that given review
-  def self.restaurant(name)
-    Restaurant.find_by_name == name
+  def self.restaurant(review)
+    @@all.select{|review|review.customer}
   end
 
 end

@@ -1,8 +1,5 @@
 class Customer
   # Build the following methods on the customer class
-
-
-
   attr_accessor :first_name, :last_name,:all,:all_names
   @@all = []
 
